@@ -88,12 +88,7 @@ for cnt in contours:
         if w >= 100 and w <= 200 and h >= 10 and h <= 30:
             print("count", count)
             count += 1
-            if ratio >= 0.9 and ratio <= 1.1:
-                warped = cv2.drawContours(warped, [cnt], -1, random_color(), 3)
-                # cv2.putText(warped, 'Square', (x1, y1), cv2.FONT_HERSHEY_SIMPLEX, 0.6, (255, 255, 0), 2)
-            else:
-                # cv2.putText(warped, 'Rectangle', (x1, y1), cv2.FONT_HERSHEY_SIMPLEX, 0.6, (0, 255, 0), 2)
-                warped = cv2.drawContours(warped, [cnt], -1, random_color(), 3)
+            warped = cv2.drawContours(warped, [cnt], -1, random_color(), 3)
 
 
 showImage("Shape", warped)
